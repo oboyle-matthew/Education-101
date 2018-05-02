@@ -2,19 +2,19 @@
   <div id="app">
     <p>White = {{white_num.toFixed(2)}}%</p>
     <div class="horizontal" v-for="n in Math.floor(white_num)">
-      <img src="../person.png">
+      <img src="../../images/person.png">
     </div>
     <p>Black = {{black_num.toFixed(2)}}%</p>
     <div class="horizontal" v-for="n in Math.floor(black_num)">
-      <img src="../person.png">
+      <img src="../../images/person.png">
     </div>
     <p>Hispanic = {{hispanic_num.toFixed(2)}}%</p>
     <div class="horizontal" v-for="n in Math.floor(hispanic_num)">
-      <img src="../person.png">
+      <img src="../../images/person.png">
     </div>
     <p>Asian = {{asian_num.toFixed(2)}}%</p>
     <div class="horizontal" v-for="n in Math.floor(asian_num)">
-      <img src="../person.png">
+      <img src="../../images/person.png">
     </div>
   </div>
 </template>
