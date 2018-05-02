@@ -1,21 +1,57 @@
 <template>
   <div id="app">
-    <p>{{black_num}}</p>
-    <p>{{white_num}}</p>
+    <p>White = {{white_num.toFixed(2)}}%</p>
+    <div class="horizontal" v-for="n in Math.floor(white_num)">
+      <img src="../person.png">
+    </div>
+    <p>Black = {{black_num.toFixed(2)}}%</p>
+    <div class="horizontal" v-for="n in Math.floor(black_num)">
+      <img src="../person.png">
+    </div>
+    <p>Hispanic = {{hispanic_num.toFixed(2)}}%</p>
+    <div class="horizontal" v-for="n in Math.floor(hispanic_num)">
+      <img src="../person.png">
+    </div>
+    <p>Asian = {{asian_num.toFixed(2)}}%</p>
+    <div class="horizontal" v-for="n in Math.floor(asian_num)">
+      <img src="../person.png">
+    </div>
   </div>
 </template>
 
 <script>
   export default {
     name: 'app',
-    props: ['black_num', 'white_num'],
+    props: ['white', 'black', 'hispanic', 'asian'],
     data () {
       return {
         msg: 'Welcome to Your Vue.js App'
+      }
+    },
+    computed: {
+      white_num: function() {
+        return this.white / (this.white + this.black + this.hispanic + this.asian) * 100;
+      },
+      black_num: function() {
+        return this.black / (this.white + this.black + this.hispanic + this.asian) * 100;
+      },
+      hispanic_num: function() {
+        return this.hispanic / (this.white + this.black + this.hispanic + this.asian) * 100;
+      },
+      asian_num: function() {
+        return this.asian / (this.white + this.black + this.hispanic + this.asian) * 100;
       }
     }
   }
 </script>
 
 <style lang="scss">
+  .horizontal {
+    display: inline;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
 </style>
