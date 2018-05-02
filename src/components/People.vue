@@ -2,19 +2,19 @@
   <div id="app">
     <p>White = {{white_num.toFixed(2)}}%</p>
     <div class="horizontal" v-for="n in Math.floor(white_num)">
-      <img src="../../images/person.png">
+      <img src="https://thumbs.dreamstime.com/b/man-icon-vector-person-symbol-pictogram-illustration-glyph-97085462.jpg">
     </div>
     <p>Black = {{black_num.toFixed(2)}}%</p>
     <div class="horizontal" v-for="n in Math.floor(black_num)">
-      <img src="../../images/person.png">
+      <img src="https://thumbs.dreamstime.com/b/man-icon-vector-person-symbol-pictogram-illustration-glyph-97085462.jpg">
     </div>
     <p>Hispanic = {{hispanic_num.toFixed(2)}}%</p>
     <div class="horizontal" v-for="n in Math.floor(hispanic_num)">
-      <img src="../../images/person.png">
+      <img src="https://thumbs.dreamstime.com/b/man-icon-vector-person-symbol-pictogram-illustration-glyph-97085462.jpg">
     </div>
     <p>Asian = {{asian_num.toFixed(2)}}%</p>
     <div class="horizontal" v-for="n in Math.floor(asian_num)">
-      <img src="../../images/person.png">
+      <img src="https://thumbs.dreamstime.com/b/man-icon-vector-person-symbol-pictogram-illustration-glyph-97085462.jpg">
     </div>
   </div>
 </template>
